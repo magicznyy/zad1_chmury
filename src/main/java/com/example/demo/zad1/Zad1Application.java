@@ -23,27 +23,7 @@ public class Zad1Application {
 		}catch (Exception e ){
 			e.printStackTrace();
 		}
-		try {
-			openHomePage();
-		}catch (Exception e){
-			e.printStackTrace();
-		}
+
 	}
-
-
-	private static void openHomePage() throws IOException {
-		try {
-			if (Desktop.isDesktopSupported()) {
-				Desktop desktop = Desktop.getDesktop();
-				if (desktop.isSupported(Desktop.Action.BROWSE)) {
-					desktop.browse(URI.create("http://localhost:8080/info"));
-				}
-			}
-		} catch (IOException | InternalError e) {
-			e.printStackTrace();
-		}
-	}
-
-
 
 }
